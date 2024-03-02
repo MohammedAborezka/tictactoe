@@ -28,10 +28,11 @@ def move(symbol,sheet):
                 if sheet[x-1][y-1]=="x" or sheet[x-1][y-1]=="o":
                     print("that pleace is already played")
                     continue
-                sheet[x-1][y-1]=symbol
-                break
             except:
                 print("please enter a number from 1 to 3")
+            else:
+                sheet[x-1][y-1]=symbol
+                break
             
             
             

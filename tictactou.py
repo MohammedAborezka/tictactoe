@@ -27,26 +27,26 @@ def move(symbol,sheet):
     None.
 
     """
-        possible_numbers =[1,2,3]
-        while True:
-            try:
+    possible_numbers =[1,2,3]
+    while True:
+        try:
+            x = int(input("in which row you would like to insert your symbol"))
+            while x not in possible_numbers :
+                print("number put of range please enter vavlid number from 1 to 3")
                 x = int(input("in which row you would like to insert your symbol"))
-                while x not in possible_numbers :
-                    print("number put of range please enter vavlid number from 1 to 3")
-                    x = int(input("in which row you would like to insert your symbol"))
+            y = int(input("in which column you would like to insert your symbol"))
+            while y not in possible_numbers or x == None:
+                print("number put of range please enter vavlid number from 1 to 3")
                 y = int(input("in which column you would like to insert your symbol"))
-                while y not in possible_numbers or x == None:
-                    print("number put of range please enter vavlid number from 1 to 3")
-                    y = int(input("in which column you would like to insert your symbol"))
-                    ##check if the palce already sited with symbol
-                if sheet[x-1][y-1]=="x" or sheet[x-1][y-1]=="o":
-                    print("that pleace is already played")
-                    continue
-            except:
-                print("please enter a number from 1 to 3")
-            else:
-                sheet[x-1][y-1]=symbol
-                break
+                ## check if the palce already sited with symbol
+            if sheet[x-1][y-1]=="x" or sheet[x-1][y-1]=="o":
+                print("that pleace is already played")
+                continue
+        except:
+            print("please enter a number from 1 to 3")
+        else:
+            sheet[x-1][y-1]=symbol
+            break
             
             
             
